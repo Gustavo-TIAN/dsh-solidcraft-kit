@@ -1,0 +1,33 @@
+# Applied by dsh-acp.cmd with `--patch` to the acp profile, only while the
+# SolidCraft assistant bundle is enabled in the desktop profile.
+#
+# 1) SolidCraft sends its "you are inside SolidCraft, use the solidcraft-app
+#    MCP server" note through _meta.systemPrompt.append, which DSH does not
+#    read. This puts the same guidance in the acp profile's persona.
+# 2) The shipped acp profile defaults to the API-key route (deepseek-official),
+#    but the Desktop app signs in with a DeepSeek account. Route sessions
+#    through the account provider so the stored account token is used.
+
+- id: system-prompt
+  config:
+    personaPrefix: >-
+      You are a coding agent powered by the {{model}} model.
+      You are running inside SolidCraft, a parametric 3D CAD application, as the user's assistant.
+      The open design is reachable through the `solidcraft-app` MCP server: use its tools
+      (list_commands, batch, execute, inspect_design, measure, screenshot, set_parameter, undo,
+      skill_reference) to read and change the design the user is looking at, and verify with
+      measure or inspect_design. Before building anything beyond one primitive, read
+      `skill_reference` for `solidcraft-modeling`. Prefer one `batch` over many small calls.
+      Saving, opening or exporting files waits for the user's approval, and each message allows
+      a limited number of changes. Don't use shell or file tools for the design; work through
+      the SolidCraft tools. Keep answers short.
+
+- id: agent-default-model
+  config:
+    provider: deepseek-account
+    model: deepseek-flash
+
+- id: acp
+  config:
+    provider: deepseek-account
+    model: deepseek-flash

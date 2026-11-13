@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "SolidCraft 助手",
+    "description": "在插件页管理 SolidCraft 的 ACP 集成：启用/禁用，移除即卸载；桌面助手行为不变。",
+    "detail": "docs/DETAIL.md"
+  }
+}

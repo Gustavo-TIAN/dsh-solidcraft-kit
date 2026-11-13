@@ -1,0 +1,27 @@
+{
+  "name": "dsh-solidcraft-bundle",
+  "version": "0.2.2",
+  "private": true,
+  "type": "module",
+  "description": "The visible SolidCraft switch in DSH's Plugins page; it inserts a no-op plugin and gates the SolidCraft acp overlay.",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "solidcraft.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

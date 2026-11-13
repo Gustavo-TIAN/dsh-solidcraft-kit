@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">SolidCraft assistant</title>
+  <rect width="64" height="64" rx="14" fill="#1f2937"/>
+  <path d="M32 12 51 23v20L32 54 13 43V23z" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M13 23l19 11 19-11M32 34v20" fill="none" stroke="#e5e7eb" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="46" cy="18" r="7" fill="#f59e0b"/>
+  <path d="M43 18h6M46 15v6" stroke="#1f2937" stroke-width="2" stroke-linecap="round"/>
+</svg>

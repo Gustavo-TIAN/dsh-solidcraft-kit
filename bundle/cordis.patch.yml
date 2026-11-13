@@ -1,0 +1,9 @@
+# One no-op host plugin makes this a real, loadable bundle: the market stops
+# reporting an empty patch, and enabling/disabling it still only gates the
+# SolidCraft launcher. The plugin's apply() does nothing.
+#
+# The SolidCraft persona and account route live in solidcraft.patch.yml, which
+# dsh-acp.cmd applies to the acp profile while this bundle is enabled.
+- insert:
+    - id: solidcraft-switch
+      name: 'dsh-solidcraft-bundle'

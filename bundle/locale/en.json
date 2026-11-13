@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "SolidCraft assistant",
+    "description": "Shows the SolidCraft ACP integration in Plugins. Enable or disable it here; Remove uninstalls it. The Desktop assistant is unchanged.",
+    "detail": "docs/DETAIL.md"
+  }
+}
